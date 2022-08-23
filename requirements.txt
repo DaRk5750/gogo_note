@@ -6,4 +6,4 @@ pyodbc
 cryptography
 celery
 requests
-
+whitenoise
