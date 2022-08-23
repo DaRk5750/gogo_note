@@ -6,7 +6,7 @@ from gogonote.helper import confirmation_mailing, send_password_encrypted, forge
 from datetime import datetime
 from gogonote.encrypt import encrypting
 from django.http import JsonResponse
-
+from django.views.decorators.csrf import csrf_exempt
 import json
 import requests
 
@@ -22,6 +22,7 @@ def login(request):
 def signup(request):
     return render (request, 'signup.html')
 
+@csrf_exempt
 def newuserentry(request):
     if request.method == 'POST':
         email = request.POST['newuseremail']
@@ -77,7 +78,7 @@ def success_register(request, token):
     except:
         return redirect('register')
 
-
+@csrf_exempt
 def signin(request):
     if request.method == 'POST':
         email = request.POST['useremail']
@@ -133,7 +134,7 @@ def folder_note(request):
         return render (request, 'folder_note.html',{'folder_name':folders_data,'user_random':random1, 'folder1_random':folder1_random2, 'notedata':notedata})
     return render (request, 'login.html')
 
-
+@csrf_exempt
 def addfolder(request):
     if request.method == 'POST':
         new_folder_name = request.POST.get('new_folder_name')
@@ -154,6 +155,7 @@ def addfolder(request):
     else:
         return JsonResponse({'status': 0})
 
+@csrf_exempt
 def loadfolder(request):
     if request.method == 'POST':
         user_random = request.POST.get('user_random')
@@ -164,6 +166,7 @@ def loadfolder(request):
     else:
         return JsonResponse({'status': 0})
 
+@csrf_exempt
 def editfolder(request):
     if request.method == 'POST':
         new_folder_name = request.POST.get('folder_name')
@@ -179,7 +182,8 @@ def editfolder(request):
         return JsonResponse({'status': 1,'folder_name':fold})
     else:
         return JsonResponse({'status': 0})
-    
+ 
+@csrf_exempt
 def delfolder(request):
     if request.method == 'POST':
         data_sid = request.POST.get('data_sid')
@@ -189,7 +193,7 @@ def delfolder(request):
         return JsonResponse({'status': 0})
 
 # NOTES (ENCRYPTION IN THIS ONLY) 
-
+@csrf_exempt
 def add_note(request):
     if request.method == 'POST':
         paskey = request.session['paskey']
@@ -212,7 +216,7 @@ def add_note(request):
             return JsonResponse({'status': 1,'random3':random3})
     else:
         return JsonResponse({'status': 0})
-
+@csrf_exempt
 def show_note(request):
     if request.method == 'POST':
         paskey = request.session['paskey']
@@ -228,7 +232,7 @@ def show_note(request):
         return JsonResponse({'status': 1,'notedata':notedata})
     else:
         return JsonResponse({'status': 0})
-
+@csrf_exempt
 def edit_note(request):
     if request.method == 'POST':
         paskey = request.session['paskey']
@@ -241,6 +245,7 @@ def edit_note(request):
     else:
         return JsonResponse({'status': 0})
 
+@csrf_exempt
 def del_note(request):
     if request.method == 'POST':
         random3 = request.POST.get('random3')
@@ -258,6 +263,8 @@ def logout(request):
     except:
         return redirect('login')
 
+    
+@csrf_exempt
 def forgetpassword(request):
     if request.method == 'POST':
         username = request.POST.get('useremail')
@@ -362,6 +369,7 @@ def change_password(request,token):
 # def change_password(request):
 #     return render (request, 'user-change-password.html')
 
+@csrf_exempt
 def userchangepassword(request):
     if request.method == 'POST':
         email = request.POST.get('useremailchange')
