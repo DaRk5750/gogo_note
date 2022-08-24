@@ -304,7 +304,7 @@ def forgetpassword(request):
     else:
         return render(request,'forgetpassword.html')
 
-
+@csrf_exempt
 def change_password(request,token):
     print("token   ",token)
     try:
