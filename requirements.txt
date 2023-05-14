@@ -2,7 +2,7 @@ virtualenv
 Django
 django-pyodbc
 django-mssql-backend
-mssql-django
+django-azure-sql-backend
 pyodbc
 cryptography
 celery
@@ -10,4 +10,4 @@ requests
 whitenoise
 gunicorn
 mysqlclient
-django-azure-sql-backend
+
