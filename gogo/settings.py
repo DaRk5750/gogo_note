@@ -93,8 +93,8 @@ WSGI_APPLICATION = 'gogo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',  
-        'NAME': 'gogo-note',
-        'HOST': 'django12.database.windows.net',
+        'NAME': 'gogo-note1',
+        'HOST': 'django1.database.windows.net',
         'PORT': '',
         'USER': 'vpoo',
         'PASSWORD': 'Vivek123@',
