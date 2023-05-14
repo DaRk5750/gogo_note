@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'gogo-note'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_18EE8453E71F44BBB97C5F6189599B61 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_12EBB6D37F3743718713AFAF3E9086B4 }}
