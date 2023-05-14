@@ -1,7 +1,5 @@
 virtualenv
-Django==2.1.15
 django-pyodbc
-django-pyodbc-azure==2.1.0.0
 pyodbc
 cryptography
 celery
@@ -9,3 +7,5 @@ requests
 whitenoise
 gunicorn
 mysqlclient
+Django==2.1.15
+django-pyodbc-azure==2.1.0.0
