@@ -95,11 +95,11 @@ DATABASES = {
         'ENGINE': 'sql_server.pyodbc',  
         'NAME': 'gogo-note',
         'HOST': 'django12.database.windows.net',
-        'PORT': '1433',
+        'PORT': '',
         'USER': 'vpoo',
         'PASSWORD': 'Vivek123@',
         'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
+            'driver': 'ODBC Driver 18 for SQL Server',
             'encrypt': 'yes',
             'trust_server_certificate': 'no',
             'connection_timeout': 50,
