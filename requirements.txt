@@ -1,5 +1,6 @@
 virtualenv
 Django
+django-pyodbc
 django-mssql-backend
 mssql-django
 pyodbc
@@ -10,4 +11,4 @@ whitenoise
 gunicorn
 django-azure-sql-backend
 mysqlclient
-django-pyodbc
+
