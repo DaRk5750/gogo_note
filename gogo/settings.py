@@ -92,7 +92,8 @@ WSGI_APPLICATION = 'gogo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
+#         'ENGINE': 'mssql',
+        'ENGINE': 'django.db.backends.mysql',
         'HOST': 'demo1serverdjango.database.windows.net',
         'PORT': '',
         'NAME': 'gogo__note',
@@ -100,7 +101,8 @@ DATABASES = {
         'PASSWORD': 'Always4ume&@',
 
         'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
+#             'driver': 'ODBC Driver 17 for SQL Server',
+            'init_command':"SET sql_mode='STRICT_TRANS_TABLES'",
         },
     },
 }
