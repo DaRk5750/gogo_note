@@ -96,7 +96,7 @@ DATABASES = {
         'NAME': 'gogo-note1',
         'HOST': 'django1.database.windows.net',
         'PORT': '',
-        'USER': 'vpoo',
+        'USER': 'vpoo@django1.database.windows.net',
         'PASSWORD': 'Vivek123@',
         'OPTIONS': {
             'driver': 'ODBC Driver 18 for SQL Server',
