@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
     'gogonote',
+    'django_pyodbc_azure',
 ]
 
 MIDDLEWARE = [
