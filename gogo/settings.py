@@ -99,7 +99,7 @@ DATABASES = {
         'USER': 'vpoo',
         'PASSWORD': 'Vivek123@',
         'OPTIONS': {
-            'driver': 'ODBC Driver 13 for SQL Server',
+            'driver': 'ODBC Driver 18 for SQL Server',
             'encrypt': 'yes',
             'trust_server_certificate': 'no',
             'connection_timeout': 50,
