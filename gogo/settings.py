@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'gogo.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'gogo__note',
+#         'NAME': 'gogo-note-db',
 #         'HOST': 'localhost',
 #         'USER': 'root',
 #         'PASSWORD': '',
