@@ -19,8 +19,8 @@ class foldername(models.Model):
 
 class notenames(models.Model):
     Email = models.EmailField(max_length=200)
-    title = models.CharField(max_length=40000)
-    note = models.CharField(max_length=40000)
+    title = models.CharField(max_length=4000)
+    note = models.CharField(max_length=4000)
     random1 = models.CharField(max_length=200)
     random2 = models.CharField(max_length=200)
     random3 = models.CharField(max_length=200,unique=True,null=True)
